@@ -1,0 +1,19 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"CoffeeLint",
+		"CoffeeScript",
+		"Comments Aware Enter",
+		"DetectSyntax",
+		"ERB Insert and Toggle Commands",
+		"ERB Snippets",
+		"Git",
+		"jQuery",
+		"Package Control",
+		"RubyTest",
+		"SCSS",
+		"SublimeCodeIntel",
+		"SublimeLinter"
+	]
+}

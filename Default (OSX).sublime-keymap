@@ -1,0 +1,56 @@
+[
+{ "keys": ["super+shift+["], "command": "insert_snippet", "args": {"contents": "{ $1 }$0"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|$)", "match_all": true }
+    ]
+  },
+
+  { "keys": ["super+shift+8"], "command": "insert_snippet", "args": { "contents": "puts '*' * 300\nputs '$1'\nputs '-' * 200$0" } },
+  { "keys": ["super+shift+8"], "command": "insert_snippet", "args": { "contents": "puts '*' * 300\nputs ${1:$SELECTION}\nputs '-' * 200$0" } },
+
+  { "keys": ["super+shift+9"], "command": "insert_snippet", "args": { "contents": "logger.info( '*' * 300)\nlogger.info( $1)\nlogger.info( '-' * 200)$0" } },
+  { "keys": ["super+shift+9"], "command": "insert_snippet", "args": { "contents": "logger.info( '*' * 300)\nlogger.info( ${1:$SELECTION})\nlogger.info( '-' * 200)$0" } },
+
+  { "keys": ["super+shift+["], "command": "insert_snippet", "args": {"contents": "{ ${1:$SELECTION} }$0"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+
+  { "keys": ["super+shift+w"], "command": "close_all" },
+
+  // wrapping erb snippets
+  { "keys": ["alt+p"], "command": "insert_snippet", "args": { "name": "Packages/User/pe_wrap.sublime-snippet" } },
+
+  { "keys": ["alt+r"], "command": "insert_snippet", "args": { "name": "Packages/User/er_wrap.sublime-snippet" } },
+
+  // coffeescript string interpolation
+  { "keys": ["#"], "command": "insert_snippet", "args": {"contents": "#{${1:$SELECTION}}$0"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      {
+        "operand": "(string.quoted.double.coffee | string.interpolated.coffee) - string source",
+        "operator": "equal",
+        "match_all": true,
+        "key": "selector"
+      }
+    ]
+  },
+
+  { "keys": ["super+shift+;"], "command": "expand_selection", "args": {"to": "scope"} }
+
+  // todo: erb comments
+
+  // { "keys": ["super+forward_slash"],
+  //   "command": "insert_snippet",
+  //   "args": ,
+  //   "context": },
+
+  // { "keys": ["super+alt+forward_slash"],
+  //   "command": "toggle_comment",
+  //   "args": ,
+  //   "context": }
+]
