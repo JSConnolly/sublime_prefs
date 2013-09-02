@@ -1,14 +1,19 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
 		"Alignment",
+		"Better CoffeeScript",
+		"BufferScroll",
 		"CoffeeLint",
 		"CoffeeScript",
 		"Comments Aware Enter",
 		"DetectSyntax",
+		"Ember.js Snippets",
 		"ERB Insert and Toggle Commands",
 		"ERB Snippets",
 		"Git",
+		"Handlebars",
 		"jQuery",
 		"Package Control",
 		"RubyTest",
