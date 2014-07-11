@@ -1,4 +1,6 @@
 [
+// make paste use correct indentation
+{ "keys": ["super+v"], "command": "paste_and_indent" },
 { "keys": ["super+shift+["], "command": "insert_snippet", "args": {"contents": "{ $1 }$0"}, "context":
     [
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
@@ -7,7 +9,7 @@
     ]
   },
 
-  { "keys": ["super+shift+8"], "command": "insert_snippet", "args": { "contents": "puts '*' * 300\nputs '$1'\nputs '-' * 200$0" } },
+  { "keys": ["super+shift+8"], "command": "insert_snippet", "args": { "contents": "puts '*' * 300\np '$1'\nputs '-' * 200$0" } },
   { "keys": ["super+shift+8"], "command": "insert_snippet", "args": { "contents": "puts '*' * 300\nputs ${1:$SELECTION}\nputs '-' * 200$0" } },
 
   { "keys": ["super+shift+9"], "command": "insert_snippet", "args": { "contents": "logger.info( '*' * 300)\nlogger.info( $1)\nlogger.info( '-' * 200)$0" } },
@@ -23,23 +25,22 @@
   { "keys": ["super+shift+w"], "command": "close_all" },
 
   // move tab to group
-  { "keys": ["super+alt+1"], "command": "move_to_group", "args": { "group": 0 } },
-  { "keys": ["super+alt+2"], "command": "move_to_group", "args": { "group": 1 } },
-  { "keys": ["super+alt+3"], "command": "move_to_group", "args": { "group": 2 } },
-  { "keys": ["super+alt+4"], "command": "move_to_group", "args": { "group": 3 } },
+  { "keys": ["alt+1"], "command": "move_to_group", "args": { "group": 0 } },
+  { "keys": ["alt+2"], "command": "move_to_group", "args": { "group": 1 } },
+  { "keys": ["alt+3"], "command": "move_to_group", "args": { "group": 2 } },
+  { "keys": ["alt+4"], "command": "move_to_group", "args": { "group": 3 } },
 
   // focus group
-  { "keys": ["alt+shift+1"], "command": "focus_group", "args": { "group": 0 } },
-  { "keys": ["alt+shift+2"], "command": "focus_group", "args": { "group": 1 } },
-  { "keys": ["alt+shift+3"], "command": "focus_group", "args": { "group": 2 } },
-  { "keys": ["alt+shift+4"], "command": "focus_group", "args": { "group": 3 } },
-
+  { "keys": ["ctrl+1"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["ctrl+2"], "command": "focus_group", "args": { "group": 1 } },
+  { "keys": ["ctrl+3"], "command": "focus_group", "args": { "group": 2 } },
+  { "keys": ["ctrl+4"], "command": "focus_group", "args": { "group": 3 } },
 
 
   // focus split window
 
   {
-    "keys": ["ctrl+1"],
+    "keys": ["ctrl+shift+1"],
     "command": "set_layout",
     "args":
     {
@@ -49,7 +50,7 @@
     }
   },
   {
-    "keys": ["ctrl+2"],
+    "keys": ["ctrl+shift+2"],
     "command": "set_layout",
     "args":
     {
@@ -59,7 +60,7 @@
     }
   },
   {
-    "keys": ["ctrl+3"],
+    "keys": ["ctrl+shift+3"],
     "command": "set_layout",
     "args":
     {
@@ -69,7 +70,7 @@
     }
   },
   {
-    "keys": ["ctrl+4"],
+    "keys": ["ctrl+shift+4"],
     "command": "set_layout",
     "args":
     {
@@ -99,7 +100,7 @@
 
   { "keys": ["super+k", "super+n"], "command": "title_case" },
 
-  { "keys": ["super+shift+;"], "command": "expand_selection", "args": {"to": "scope"} }
+  { "keys": ["super+shift+;"], "command": "expand_selection", "args": {"to": "scope"} },
 
   // todo: erb comments
 
@@ -112,4 +113,91 @@
   //   "command": "toggle_comment",
   //   "args": ,
   //   "context": }
+
+  // bookmarks
+  { "keys": ["alt+j"], "command": "next_bookmark" },
+  { "keys": ["alt+k"], "command": "prev_bookmark" },
+  { "keys": ["alt+m"], "command": "toggle_bookmark" },
+  { "keys": ["alt+c"], "command": "clear_bookmarks" },
+  { "keys": ["alt+a"], "command": "select_all_bookmarks" },
+
+  // https://github.com/AlexanderZaytsev/SublimeText2RailsFileSwitcher
+  { "keys": ["super+shift+m"], "command": "open_related_rails_model" },
+  { "keys": ["super+shift+c"], "command": "open_related_rails_controller" },
+  { "keys": ["super+shift+h"], "command": "open_related_rails_view" },
+  { "keys": ["super+4"], "command": "open_related_rspec_model" },
+  { "keys": ["super+5"], "command": "open_related_rspec_controller" },
+
+  // for ruby test (to make it work from all contexts)
+  { "keys": ["super+shift+e"], "command": "run_last_ruby_test"
+  },
+
+  // for MarkAndMove
+  { "keys": ["alt+f"], "command": "mark_and_move_do_it_all"
+  },
+
+  { "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+
+  // for case converter
+  { "keys": ["super+shift+alt+s"], "command": "convert_to_snake"},
+  { "keys": ["super+shift+alt+c"], "command": "convert_to_camel"},
+  { "keys": ["super+shift+alt+p"], "command": "convert_to_pascal"},
+  {"keys": ["ctrl+e"],
+      "args": {
+          "action": "expand_abbreviation"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.expand_abbreviation"
+          }
+      ]
+  },
+  {
+      "keys": [
+          "tab"
+      ],
+      "command": "expand_abbreviation_by_tab",
+      "context": [
+          {
+              "operand": "source.css, source.sass, source.less, source.scss, source.stylus, source.jade, text.slim, text.xml, text.html - source, text.haml, text.scala.html, source string",
+              "operator": "equal",
+              "match_all": true,
+              "key": "selector"
+          },
+          {
+              "operand": "storage.type.templatetag.django",
+              "operator": "not_equal",
+              "match_all": true,
+              "key": "selector"
+          },
+          {
+              "match_all": true,
+              "key": "selection_empty"
+          },
+          {
+              "operator": "equal",
+              "operand": false,
+              "match_all": true,
+              "key": "has_next_field"
+          },
+          {
+              "operator": "equal",
+              "operand": false,
+              "match_all": true,
+              "key": "setting.disable_tab_abbreviations"
+          },
+          {
+              "operand": false,
+              "operator": "equal",
+              "match_all": true,
+              "key": "auto_complete_visible"
+          },
+          {
+              "match_all": true,
+              "key": "is_abbreviation"
+          }
+      ]
+  },
+  { "keys": ["shift+alt+d"], "command": "dired"}
 ]

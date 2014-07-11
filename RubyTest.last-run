@@ -1,4 +1,4 @@
 {
-	"last_test_run": "rspec spec/models/user_spec.rb",
-	"last_test_working_dir": "/Users/JConnolly/Desktop/DBC/rails_projects/LiftHero"
+	"last_test_run": "bundle exec foreman run --procfile Procfile.test --env test.env rspec spec/features/confirmation_spec.rb -l14",
+	"last_test_working_dir": "/Users/JConnolly/Desktop/coding/Lift Hero projects/LiftHero"
 }

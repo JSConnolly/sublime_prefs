@@ -3,22 +3,49 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"AngularJS",
 		"Better CoffeeScript",
+		"Bootstrap 3 Snippets",
 		"BufferScroll",
+		"Case Conversion",
 		"CoffeeLint",
 		"CoffeeScript",
+		"Color Highlighter",
 		"Comments Aware Enter",
 		"DetectSyntax",
+		"dired",
 		"Ember.js Snippets",
+		"Emmet",
 		"ERB Insert and Toggle Commands",
 		"ERB Snippets",
+		"Evernote",
+		"FindKeyConflicts",
 		"Git",
+		"GitGutter",
 		"Handlebars",
 		"jQuery",
+		"Keymaps",
+		"MarkAndMove",
+		"Markdown Preview",
 		"Package Control",
+		"Pretty JSON",
+		"Rails File Switcher",
 		"RubyTest",
 		"SCSS",
-		"SublimeCodeIntel",
-		"SublimeLinter"
+		"SideBarEnhancements",
+		"SublimeEvernote",
+		"SublimeLinter",
+		"Sublimerge Pro",
+		"SublimeText2RailsFileSwitcher",
+		"SyncedSideBar",
+		"Text Pastry",
+		"Theme - Afterglow",
+		"TodoReview",
+		"ToggleQuotes",
+		"WordCount"
+	],
+	"repositories":
+	[
+		"https://github.com/AlexanderZaytsev/SublimeText2RailsFileSwitcher/tree/python3"
 	]
 }

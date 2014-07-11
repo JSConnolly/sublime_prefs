@@ -1,19 +1,31 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"color_scheme": "Packages/User/Railscasts.tmTheme",
+	"auto_complete_delay": 0,
+	"color_inactive_tabs": true,
+	"color_scheme": "Packages/User/Afterglow (SL).tmTheme",
+	"copy_with_empty_selection": false,
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 15.0,
+	"font_size": 16.0,
 	"ignored_packages":
 	[
+		"Color Highlighter",
 		"Vintage"
 	],
+	"keymaps":
+	{
+		"show_pretty_keys": true
+	},
 	"open_files_in_new_window": false,
 	"rulers":
 	[
 		80
 	],
 	"save_on_focus_lost": true,
+	"sidebar_size_12": true,
+	"status_bar_brighter": true,
 	"tab_size": 2,
+	"tabs_medium": true,
+	"theme": "Afterglow-blue.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
