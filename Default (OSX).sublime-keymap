@@ -11,6 +11,14 @@
   "context": [{ "key": "setting.ShellCommand" }]
 },
 
+// https://github.com/braindamageinc/SublimeHttpRequester
+{ "keys": ["ctrl+w", "e"], "command": "http_requester" },
+{ "keys": ["ctrl+w", "r"], "command": "http_requester_refresh" },
+
+{ "keys": ["ctrl+w", "o"], "command": "open_url" },
+{ "keys": ["ctrl+w", "g"], "command": "google_search" },
+{ "keys": ["ctrl+w", "h"], "command": "goto_documentation" },
+
 
 //// not working
 // {
