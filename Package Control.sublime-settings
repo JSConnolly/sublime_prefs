@@ -1,38 +1,61 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"Alignment",
 		"AngularJS",
+		"ASCII Decorator",
 		"Better CoffeeScript",
 		"Bootstrap 3 Snippets",
+		"Brackets Color Scheme",
 		"BufferScroll",
 		"Case Conversion",
-		"CoffeeLint",
+		"Chain of Command",
 		"CoffeeScript",
 		"Color Highlighter",
 		"Comments Aware Enter",
+		"CTags",
 		"DetectSyntax",
+		"Dimmed Color Scheme",
 		"dired",
+		"DocBlockr",
+		"Edit Command Palette",
 		"Ember.js Snippets",
 		"Emmet",
-		"ERB Insert and Toggle Commands",
 		"ERB Snippets",
 		"Evernote",
 		"FindKeyConflicts",
+		"FixMyJS",
 		"Git",
 		"GitGutter",
 		"Handlebars",
+		"JavaScriptNext - ES6 Syntax",
 		"jQuery",
+		"JSHint",
+		"JSLint",
 		"Keymaps",
 		"MarkAndMove",
 		"Markdown Preview",
 		"Package Control",
+		"Paraiso Color Scheme",
 		"Pretty JSON",
 		"Rails File Switcher",
+		"RSpec",
+		"RuboCop",
 		"RubyTest",
 		"SCSS",
+		"Shell Command",
 		"SideBarEnhancements",
+		"sublime-expand-selection-to-quotes",
+		"sublime-text-2-buildview",
 		"SublimeEvernote",
 		"SublimeLinter",
 		"Sublimerge Pro",
@@ -40,12 +63,18 @@
 		"SyncedSideBar",
 		"Text Pastry",
 		"Theme - Afterglow",
+		"Theme - Phoenix",
+		"Theme - Piatto",
+		"Theme - Spacegray",
 		"TodoReview",
 		"ToggleQuotes",
+		"URLEncode",
 		"WordCount"
 	],
 	"repositories":
 	[
-		"https://github.com/AlexanderZaytsev/SublimeText2RailsFileSwitcher/tree/python3"
+		"https://github.com/AlexanderZaytsev/SublimeText2RailsFileSwitcher/tree/python3",
+		"https://github.com/kek/sublime-expand-selection-to-quotes",
+		"https://github.com/kek/sublime-expand-selection-to-quotes"
 	]
 }

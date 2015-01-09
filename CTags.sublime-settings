@@ -1,0 +1,1 @@
+{ "command": "source $HOME/.bashrc && rvm-auto-ruby -S ripper-tags" }

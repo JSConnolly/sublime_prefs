@@ -1,4 +1,60 @@
 [
+{ "keys": ["ctrl+?"], "command": "cheat_sheet" },
+{ "keys": ["ctrl+/"], "command": "find_keymap" },
+
+// for ShellCommands
+// from http://thirtysixthspan.com/posts/useful-sublime-text-3-packages-for-a-rubyist
+{ "keys": ["ctrl+c", "c"], "command": "shell_command" },
+{
+  "keys": ["c"],
+  "command": "shell_command_refresh",
+  "context": [{ "key": "setting.ShellCommand" }]
+},
+
+
+//// not working
+// {
+//   "keys": ["ctrl+c", "r"],
+//   "command": "shell_command",
+//   "args": {
+//     "command_prefix": "source $HOME/.bashrc && rvm-auto-ruby -S",
+//     "prompt": "Shell Command"
+//   }
+// },
+
+// for BuildView
+{
+  "keys": ["super+b"],
+  "command": "build",
+  "context": [{
+    "key": "build_fake",
+    "operator": "equal",
+    "operand": true
+  }]
+},
+
+{
+  "keys": ["ctrl+l", "r"],
+  "command": "chain",
+  "args": {
+    "commands": [
+      ["rubocop_check_single_file"],
+      ["hide_panel", {"cancel": true}]
+    ]
+  }
+},
+
+{
+  "keys": ["ctrl+l", "j"],
+  "command": "chain",
+  "args": {
+    "commands": [
+      ["jslint"],
+      ["hide_panel", {"cancel": true}]
+    ]
+  }
+},
+
 // make paste use correct indentation
 { "keys": ["super+v"], "command": "paste_and_indent" },
 { "keys": ["super+shift+["], "command": "insert_snippet", "args": {"contents": "{ $1 }$0"}, "context":
@@ -31,16 +87,16 @@
   { "keys": ["alt+4"], "command": "move_to_group", "args": { "group": 3 } },
 
   // focus group
-  { "keys": ["ctrl+1"], "command": "focus_group", "args": { "group": 0 } },
-  { "keys": ["ctrl+2"], "command": "focus_group", "args": { "group": 1 } },
-  { "keys": ["ctrl+3"], "command": "focus_group", "args": { "group": 2 } },
-  { "keys": ["ctrl+4"], "command": "focus_group", "args": { "group": 3 } },
+  { "keys": ["super+1"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["super+2"], "command": "focus_group", "args": { "group": 1 } },
+  { "keys": ["super+3"], "command": "focus_group", "args": { "group": 2 } },
+  { "keys": ["super+4"], "command": "focus_group", "args": { "group": 3 } },
 
 
-  // focus split window
+  // set columns
 
   {
-    "keys": ["ctrl+shift+1"],
+    "keys": ["super+shift+1"],
     "command": "set_layout",
     "args":
     {
@@ -50,7 +106,7 @@
     }
   },
   {
-    "keys": ["ctrl+shift+2"],
+    "keys": ["super+shift+2"],
     "command": "set_layout",
     "args":
     {
@@ -60,7 +116,7 @@
     }
   },
   {
-    "keys": ["ctrl+shift+3"],
+    "keys": ["super+shift+3"],
     "command": "set_layout",
     "args":
     {
@@ -70,7 +126,7 @@
     }
   },
   {
-    "keys": ["ctrl+shift+4"],
+    "keys": ["super+shift+4"],
     "command": "set_layout",
     "args":
     {
@@ -199,5 +255,9 @@
           }
       ]
   },
-  { "keys": ["shift+alt+d"], "command": "dired"}
+  { "keys": ["shift+alt+d"], "command": "dired"},
+
+  {
+    "keys": ["super+'"], "command": "expand_selection_to_quotes"
+  }
 ]
