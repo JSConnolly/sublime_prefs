@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+    POST ${1:http://api.lvh.me:3000/community/administrator}
+    Content-type: application/x-www-form-urlencoded
+    SAME_FILE: True
+    POST_BODY:
+    ${2:var1}=${3:value1}&
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>posttemplate</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
